@@ -221,5 +221,5 @@ async def help(*args):
 @client.command()
 async def npr(*args):
 
-client.run('NDQ3MjEwMTY2MzcxMjIxNTE0.DeER4w.kjDIBnRfyI67C9G26uQW21fT3Aw')
+client.run('BOT_TOKEN')
 
