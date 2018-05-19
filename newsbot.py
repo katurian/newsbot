@@ -52,7 +52,7 @@ async def us(*args):
 	await asyncio.sleep(3)
 	link3 = d['entries'][2]['link']
 	await client.say(link3)
-	wait asyncio.sleep(3)
+	await asyncio.sleep(3)
 	link4 = d['entries'][3]['link']
 	await client.say(link4)
 
