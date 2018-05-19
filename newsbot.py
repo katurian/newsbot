@@ -7,7 +7,7 @@ import platform
 import feedparser
 
 
-client = Bot(description="Basic Bot by Habchy#1665", command_prefix="news-", pm_help = False)
+client = Bot(description="Newsbot by Kat", command_prefix="news-", pm_help = False)
 
 
 @client.event
