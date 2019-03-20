@@ -1,4 +1,3 @@
-
 import discord
 import asyncio
 from discord.ext.commands import Bot
@@ -16,7 +15,7 @@ async def on_ready():
 	print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
 	print('--------')
 	print('Made by Kate Kulinski')
-	return await client.change_presence(game=discord.Game(name='PLAYING STATUS HERE'))
+	return await client.change_presence(game=discord.Game(name='Reading!'))
 
 @client.command()
 async def politics(*args):
@@ -198,4 +197,24 @@ async def asia(*args):
 	link4 = d['items'][3]['link']
 	await client.say(link4)
 
-client.run('NTU4MDA2OTUzMDQ2MTc5ODYw.D3QkBA.eCxULGtdGYQDBRA7Ixnh_Qk31RI')
+
+@client.command()
+async def guide(*args):
+	guide = '''
+	**NEWSIE COMMANDS**
+	!asia = Asia
+	!middle = Middle East 
+	!americas = Americas
+	!china = China 
+	!us = United States
+	!europe = Europe
+	!africa = Africa
+	!econ = Economics/Financial 
+	!business = Business this week
+	!politics = Politics this week
+	!tech = Technology
+	
+	'''
+	await client.say(guide)
+
+client.run('')
