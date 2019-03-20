@@ -9,14 +9,14 @@ import feedparser
 
 client = Bot(description="Newsbot by Kat", command_prefix="news-", pm_help = False)
 
-
 @client.event
 async def on_ready():
 	print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
 	print('--------')
 	print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
 	print('--------')
-	return await client.change_presence(game=discord.Game(name='PLAYING STATUS HERE')) 
+	print('Made by Kate Kulinski')
+	return await client.change_presence(game=discord.Game(name='PLAYING STATUS HERE'))
 
 
 @client.command()
@@ -207,19 +207,4 @@ async def asia(*args):
 	link4 = d['entries'][3]['link']
 	await client.say(link4)
 
-@client.command()
-async def help(*args):
-	await client.say("news-asia")
-	await client.say("news-europe")
-	await client.say("news-us")
-	await client.say("news-world")
-	await client.say("news-africa")
-	await client.say("news-tech")
-	await client.say("news-culture")
-	await client.say("news-econ")
-
-@client.command()
-async def npr(*args):
-
-client.run('BOT_TOKEN')
-
+client.run('BOT TOKEN')
